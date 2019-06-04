@@ -84,7 +84,8 @@ average = activity %>%
       group_by(interval) %>% 
       summarise(mean_steps = mean(steps, na.rm = T))
 
-ggplot(average, aes(interval,mean_steps))+geom_line()+xlab("5-minute interval")+ylab("Average steps")
+ggplot(average, aes(interval,mean_steps))+geom_line()+xlab("5-minute interval")+ylab("Average steps")+
+      labs(title = "Average steps per interval across all days")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
